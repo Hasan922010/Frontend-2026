@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanlov elementlari</title>
+</head>
+
+<body>
+    <h1>Kurs so'rovnomasi</h1>
+    <hr>
+    <form action="" method="post">
+        <!-- SHAXSIY MA'LUMOTLAR -->
+        <fieldset>
+            <legend>Shaxsiy ma'lumotlar</legend>
+            <p><label for="ism">Ismingiz:</label>
+                <br>
+                <input type="text" id="ism" name="ism" placeholder="Ismingiz" required>
+            </p>
+            <p>
+                <label for="email">Email:</label>
+                <br>
+                <input type="email" id="email" name="email" placeholder="Email manzilingiz" required>
+            </p>
+            <p><label for="yosh">Yoshingiz:</label>
+                <br>
+                <input type="number" id="yosh" name="yosh" min="14" max="60" placeholder="20" required>
+            </p>
+        </fieldset>
+        <hr>
+        <!-- jinsini tanlash radoio tugmalari -->
+        <fieldset>
+            <legend>Jins</legend>
+            <input type="radio" id="erkak" name="jins" value="erkak" checked>
+            <label for="erkak">Erkak</label>
+            <br>
+            <input type="radio" id="ayol" name="jins" value="ayol">
+            <label for="ayol">Ayol</label>
+
+
+        </fieldset>
+        <hr>
+        <!-- DARAJA TANLASH RADIO -->
+        <fieldset>
+            <legend>Dasturlash Darajangiz</legend>
+            <input type="radio" id="nol" name="daraja" value="nol" checked>
+            <label for="nol">Nol hech narsani nilmayman </label>
+            <br>
+            <input type="radio" id="boshlang'ich" name="daraja" value="boshlang'ich">
+            <label for="boshlang'ich">Boshlang'ich biroz bilaman</label>
+            <br>
+            <input type="radio" id="o'rta" name="daraja" value="o'rta">
+            <label for="o'rta">O'rta darajada bilaman</label>
+            <br>
+            <input type="radio" id="ilgor" name="daraja" value="ilgor">
+            <label for="ilgor">Ilgor darajada bilaman</label>
+        </fieldset>
+        <br>
+        <!-- Qiziqishlar chekbox -->
+        <fieldset>
+            <legend>Qiziqishlar</legend>
+            <input type="checkbox" id="html" name="qiziqishlar" value="html" checked>
+            <label for="html">HTML</label>
+            <br>
+            <input type="checkbox" id="css" name="qiziqishlar" value="css" checked>
+            <label for="css">CSS</label>
+            <br>
+            <input type="checkbox" id="js" name="qiziqishlar" value="js">
+            <label for="js">JavaScript</label>
+            <br>
+            <input type="checkbox" id="python" name="qiziqishlar" value="python">
+            <label for="python">Python</label>
+            <br>
+            <input type="checkbox" name="" id="dizayn" value="dizayn">
+            <label for="dizayn">UI/UX Dizayn</label>
+        </fieldset>
+        <br>
+        <!-- SELECT- PASTGA OCHILADIGAN RO'YXAT -->
+        <fieldset>
+            <legend>Qaysi shahardansiz?</legend>
+            <p>
+                <select name="shahar" id="shahar">
+                    <option value="toshkent">Toshkent</option>
+                    <option value="samarqand">Samarqand</option>
+                    <option value="buxoro">Buxoro</option>
+                    <option value="andijon">Andijon</option>
+                    <option value="namangan">Namangan</option>
+                    <option value="farg'ona">Farg'ona</option>
+                </select>
+            </p>
+            <p>
+                <label for="kurs">Qaysi kursni xohlaysiz?</label>
+                <br>
+                <select name="kurs" id="kurs">
+                    <optgroup label="Frontend">
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="js">JavaScript</option>
+                        <option value="react">React</option>
+                    </optgroup>
+                    <optgroup label="Backend">
+                        <option value="python">Python</option>
+                        <option value="nodejs">Node.js</option>
+                        <option value="php">PHP</option>
+                    </optgroup>
+                    <optgroup label="Dizayn">
+                        <option value="figma">Figma</option>
+                        <option value="Photoshop">Photoshop</option>
+                    </optgroup>
+                </select>
+            </p>
+        </fieldset>
+        <br>
+        <!-- IZOHLAR -->
+        fieldset>
+        <legend>Qo'shimcha izohlar</legend>
+        <p>
+            <label for="izoh">Izohlaringiz:</label>
+            <br>
+            <textarea name="izoh" id="izoh" rows="4" cols="40"
+                placeholder="Qo'shimcha izohlaringizni kiriting..."></textarea>
+        </p>
+        <p>
+            <input type="checkbox" name="shartlar" id="shartlar" required>
+            <label for="shartlar">Shartlarga roziman</label>
+        </p>
+        </fieldset>
+        <br>
+        <!-- YUBORISH VA TOZALASH TUGMALARI -->
+        <p>
+            <button type="submit">Yuborish</button>
+            <button type="reset">Tozalash</button>
+        </p>
+
+
+    </form>
+</body>
+
+</html>

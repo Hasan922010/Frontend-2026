@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fikr-mulohaza formasi</title>
+</head>
+<body>
+    <h1>Fikr-mulohaza formasi</h1>
+    <hr>
+    <form action="" method="post">
+        <fieldset>
+            <legend>Shaxsiy</legend>
+            <p><label for="ism">Ismingiz:</label>
+                <br>
+                <input type="text" id="ism" name="ism" placeholder="Ismingizni kiriting" required>
+            </p>
+            <p><label for="email">Email:</label>
+                <br>
+                <input type="email" id="email" name="email" placeholder="Email manzilingizni kiriting" required>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Baholash</legend>
+            <p>Kurs qanday?</p>
+            <p><input type="radio" name="alo" id="alo1" value="yaxshi">
+                <label for="alo1">Yaxshi</label>
+            </p>
+            <p><input type="radio" name="alo" id="alo2" value="o'rta">
+                <label for="alo2">O'rta</label>
+            </p>
+            <p><input type="radio" name="alo" id="alo3" value="yomon">
+                <label for="alo3">Yomon</label>
+            </p>
+
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Nimalar yoqdi?</legend>
+            <p><input type="checkbox" name="nimalar" id="nimalar1" value="darslar">
+                <label for="nimalar1">Darslar sifati</label>
+            </p>
+            <p><input type="checkbox" name="nimalar" id="nimalar2" value="o'qituvchi">
+                <label for="nimalar2">O'qituvchi tushuntirishi</label>
+            </p>
+            <p><input type="checkbox" name="nimalar" id="nimalar3" value="amaliyot">
+                <label for="nimalar3">Amaliyot miqdori</label>
+            </p>
+            <p>
+                <input type="checkbox" name="nimalar" id="nimalar4" value="Narx-navo">
+                <label for="nimalar4">Narx-navo</label>
+            </p>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Qanday bildingiz?</legend>
+            <p><label for="qayerdan">Qayerdan?</label> </p>
+            <p>
+                <select name="qayerdan" id="qayerdan">
+                    <option value="telegram">Telegram</option>
+                    <option value="instagram">Instagram</option>
+                    <option value="facebook">Facebook</option>
+                    <option value="do'stlar">Do'stlar orqali</option>
+                    <option value="boshqa">Boshqa</option>
+                </select>
+        </p>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Izoh</legend>
+            <p>
+                <textarea name="izoh" id="izoh" cols="50" rows="5" placeholder="Izohingizni kiriting"></textarea>
+            </p>
+            <p>
+                <input type="checkbox" name="qabul_qilish" id="qabul_qilish"> 
+                <label for="qabul_qilish">Qayta bog'lanishga roziman</label>
+            </p>
+                <p>
+                    <input type="submit" value="Yuborish">
+                    <input type="reset" value="Tozalash">
+                </p>
+        </fieldset>
+
+
+</body>
+</html>
