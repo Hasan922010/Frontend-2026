@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forma darsi</title>
+</head>
+
+<body>
+    <h1>Forma darsi</h1>
+    <hr />
+    <!-- oddiy login formasi -->
+    <h2>Kirish formasi</h2>
+    <form action="" method="post">
+        <p>
+            <label for="login-email">Email:</label>
+            <br />
+            <input type="email" id="login-email" name="email" placeholder="email@gmail.com" required />
+        </p>
+        <p>
+            <label for="login-parol">Parol:</label>
+            <br />
+            <input type="password" id="login-parol" name="parol" placeholder="parol kiriting" required />
+        </p>
+        <p>
+            <button type="submit">Kirish</button>
+            <button type="reset">Tozalash</button>
+        </p>
+    </form>
+    <hr>
+    <!-- Ro'yhatdan o'tish formasi -->
+    <h2>Ro'yhatdan o'tish formasi</h2>
+    <form action="" method="post">
+        <p><label for="ism">Ismingiz:</label>
+            <br>
+            <input type="text" id="ism" name="ism" placeholder="Xasan" required>
+        </p>
+        <p><label for="familiya">Familiyangiz:</label>
+            <br>
+            <input type="text" id="familiya" name="familiya" placeholder="Aliyev" required>
+        </p>
+        <p><label for="email">Email:</label>
+            <br>
+            <input type="email" id="email" name="email" placeholder="email@gmail.com" required>
+        </p>
+
+        <p><label for="tel">Telefon:</label>
+            <br>
+            <input type="tel" id="tel" name="tel" placeholder="+998 90 123 45 67" required>
+        </p>
+
+        <p>
+            <label for="yosh">Yoshingiz:</label>
+            <br>
+            <input type="number" id="yosh" name="yosh" placeholder="20" min="14" max="100" required>
+        </p>
+        <p>
+            <label for="tug-kun">Tug'ilgan kun:</label>
+            <br>
+            <input type="date" id="tug-kun" name="tug-kun" required>
+
+        </p>
+        <p>
+            <label for="xabar">O'zingiz haqingizda:</label>
+            <br>
+            <textarea id="xabar" name="xabar" rows="4" cols="40" placeholder="O'zingiz haqingizda qisqacha ma'lumot..."></textarea>
+        </p>
+
+
+        <p><button type="submit">Ro'yhatdan o'tish</button>
+            <button type="reset">Tozalash</button>
+        </p>
+    </form>
+    <hr>
+
+    <!-- turli input turlari misoli -->
+     <h2>Input turlari namoishi</h2>
+     <form>
+        <p><label for="rang">Sevimli rang:</label>
+            <br>
+            <input type="color" id="rang" name="rang">
+        </p>
+        <p><label for="fayl">Fayl yuklash:</label>
+            <br>
+            <input type="file" id="fayl" name="fayl">
+        </p>
+        <p>
+            <label for="diapazon">Hajm (0-100):</label>
+            <br>
+            <input type="range" id="diapazon" name="diapazon" min="1" max="100" value="50">
+        </p>
+        <p>
+            <label for="qidiruv">Qidiruv:</label>
+            <br>
+            <input type="search" id="qidiruv" name="qidiruv" placeholder="Qidiring...">
+        </p>
+
+       </form>
+</body>
+
+</html>
