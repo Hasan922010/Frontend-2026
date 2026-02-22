@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Div va Span darsi</title>
+
+    <style>
+      /* Umumiy */
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      /* Id lar */
+      #header {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+      }
+
+      #nav {
+        background-color: #555;
+        padding: 10px;
+      }
+
+      #nav a {
+        color: white;
+        margin-right: 15px;
+      }
+
+      #main {
+        padding: 20px;
+      }
+
+      #footer {
+        background-color: #333;
+        color: white;
+        padding: 15px;
+        text-align: center;
+      }
+
+      /* Class lar */
+      .katak {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 5px;
+        background-color: #f9f9f9;
+      }
+
+      .muhim {
+        color: red;
+        font-weight: bold;
+      }
+
+      .yashil {
+        color: green;
+      }
+
+      .sariq-fon {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <div id="header">
+      <h1>IT Programmer</h1>
+      <p>Kelajak mutaxassislarini tayyorlaymiz</p>
+    </div>
+
+    <!-- NAV -->
+    <div id="nav">
+      <a href="#haqimda">Haqimda</a>
+      <a href="#kurslar">Kurslar</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+
+    <!-- MAIN -->
+    <div id="main">
+      <!-- HAQIMDA -->
+      <div id="haqimda" class="katak">
+        <h2>Akademiya haqida</h2>
+        <p>
+          Biz <span class="muhim">5 yildan</span> beri
+          <span class="yashil">sifatli ta'lim</span> berib kelmoqdamiz. Bizda
+          <span class="muhim">500 dan ortiq</span> bitiruvchi bor.
+        </p>
+      </div>
+
+      <!-- KURSLAR -->
+      <div id="kurslar">
+        <h2>Kurslarimiz</h2>
+
+        <div class="katak">
+          <h3>HTML + CSS</h3>
+          <p>
+            Narxi: <span class="muhim">500 000 so'm</span> | Davomiyligi:
+            <span class="yashil">2 oy</span>
+          </p>
+        </div>
+
+        <div class="katak">
+          <h3>JavaScript</h3>
+          <p>
+            Narxi: <span class="muhim">800 000 so'm</span> | Davomiyligi:
+            <span class="yashil">3 oy</span>
+          </p>
+        </div>
+
+        <div class="katak">
+          <h3>Python</h3>
+          <p>
+            Narxi: <span class="muhim">1 000 000 so'm</span> | Davomiyligi:
+            <span class="yashil">4 oy</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- SPAN NAMOYISHI -->
+      <div class="katak">
+        <h2>Span namoyishi</h2>
+        <p>
+          Bu oddiy matn.
+          <span class="sariq-fon">Bu sariq fonda.</span>
+          Bu yana oddiy matn.
+          <span class="muhim">Bu qizil va qalin.</span>
+          Bu yana oddiy.
+        </p>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div id="footer" id="kontakt">
+      <p>
+        📞
+        <a href="tel:+998901234567" style="color: white">+998 88 553 93 63</a>
+      </p>
+      <p>© 2026 IT Programmer</p>
+    </div>
+  </body>
+</html>
