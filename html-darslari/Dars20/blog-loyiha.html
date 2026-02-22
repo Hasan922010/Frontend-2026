@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dev Blog — Dasturlash Haqida</title>
+    <style>
+        /* === UMUMIY === */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f0f2f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* === HEADER === */
+        header {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: white;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        header img {
+            border-radius: 50%;
+            border: 3px solid #e94560;
+        }
+
+        header h1 {
+            font-size: 2em;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            color: #aaa;
+        }
+
+        .header-teglar span {
+            background: #e94560;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-right: 5px;
+            margin-top: 8px;
+            display: inline-block;
+        }
+
+        /* === NAV === */
+        nav {
+            background: #16213e;
+            padding: 0 40px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 5px;
+        }
+
+        nav a {
+            color: #ccc;
+            padding: 15px 20px;
+            display: block;
+            font-size: 15px;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: #e94560;
+        }
+
+        /* === LAYOUT === */
+        .wrapper {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        main {
+            flex: 2;
+        }
+
+        aside {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        /* === SECTION === */
+        section {
+            margin-bottom: 35px;
+        }
+
+        section>h2 {
+            font-size: 1.4em;
+            color: #1a1a2e;
+            border-left: 4px solid #e94560;
+            padding-left: 12px;
+            margin-bottom: 20px;
+        }
+
+        /* === ARTICLE === */
+        article {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        article img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .article-kontent {
+            padding: 20px;
+        }
+
+        article h3 {
+            color: #1a1a2e;
+            font-size: 1.2em;
+            margin-bottom: 8px;
+        }
+
+        .meta {
+            color: #888;
+            font-size: 13px;
+            margin-bottom: 12px;
+        }
+
+        article p {
+            color: #555;
+            margin-bottom: 12px;
+        }
+
+        .article-footer {
+            border-top: 1px solid #eee;
+            padding-top: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .teglar span {
+            background: #f0f2f5;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-right: 5px;
+            color: #666;
+        }
+
+        .o-qish {
+            color: #e94560;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .o-qish:hover {
+            text-decoration: underline;
+        }
+
+        /* === VIDEO === */
+        .video-container {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            margin-bottom: 20px;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 350px;
+            border: none;
+            display: block;
+        }
+
+        .video-info {
+            padding: 15px 20px;
+        }
+
+        .video-info h3 {
+            color: #1a1a2e;
+            margin-bottom: 5px;
+        }
+
+        .video-info p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* === AUDIO === */
+        .audio-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .audio-card img {
+            width: 70px;
+            height: 70px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .audio-info {
+            flex: 1;
+        }
+
+        .audio-info h4 {
+            color: #1a1a2e;
+            margin-bottom: 5px;
+        }
+
+        .audio-info p {
+            color: #888;
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+
+        .audio-info audio {
+            width: 100%;
+        }
+
+        /* === ASIDE === */
+        .aside-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .aside-card h3 {
+            color: #1a1a2e;
+            border-bottom: 2px solid #e94560;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+
+        /* Muallif */
+        .muallif {
+            text-align: center;
+        }
+
+        .muallif img {
+            border-radius: 50%;
+            border: 3px solid #e94560;
+            margin-bottom: 10px;
+        }
+
+        .muallif h4 {
+            color: #1a1a2e;
+        }
+
+        .muallif p {
+            color: #666;
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+        .muallif-stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat strong {
+            display: block;
+            color: #e94560;
+            font-size: 1.2em;
+        }
+
+        .stat span {
+            font-size: 12px;
+            color: #888;
+        }
+
+        /* Ro'yxatlar */
+        .aside-card ol,
+        .aside-card ul {
+            padding-left: 20px;
+        }
+
+        .aside-card li {
+            padding: 5px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .aside-card a {
+            color: #333;
+            font-size: 14px;
+        }
+
+        .aside-card a:hover {
+            color: #e94560;
+        }
+
+        /* Obuna forma */
+        .obuna-forma input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .obuna-forma button {
+            width: 100%;
+            padding: 10px;
+            background: #e94560;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .obuna-forma button:hover {
+            background: #c73652;
+        }
+
+        /* === FOOTER === */
+        footer {
+            background: #1a1a2e;
+            color: #aaa;
+            padding: 40px;
+            margin-top: 20px;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .footer-col {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .footer-col p {
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .footer-col a {
+            color: #aaa;
+            font-size: 14px;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .footer-col a:hover {
+            color: #e94560;
+        }
+
+        .footer-col iframe {
+            border: none;
+            border-radius: 8px;
+            width: 100%;
+            height: 200px;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 30px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            text-align: center;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header>
+        <img src="https://picsum.photos/100/100?random=60" alt="Blog logo" width="100" height="100">
+        <div>
+            <h1>⚡ Dev Blog</h1>
+            <p>Dasturlash, texnologiya va karyera haqida</p>
+            <div class="header-teglar">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Python</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== NAV ===== -->
+    <nav>
+        <ul>
+            <li><a href="#maqolalar">📝 Blog</a></li>
+            <li><a href="#videolar">🎬 Videolar</a></li>
+            <li><a href="#podkast">🎙️ Podkast</a></li>
+            <li><a href="#xarita">📍 Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <!-- ===== WRAPPER ===== -->
+    <div class="wrapper">
+
+        <!-- ===== MAIN ===== -->
+        <main>
+
+            <!-- MAQOLALAR BO'LIMI -->
+            <section id="maqolalar">
+                <h2>📝 So'nggi Maqolalar</h2>
+
+                <!-- MAQOLA 1 -->
+                <article>
+                    <img src="https://picsum.photos/700/200?random=61" alt="HTML5 maqola">
+                    <div class="article-kontent">
+                        <header>
+                            <h3>HTML5 semantik teglar — to'liq qo'llanma</h3>
+                            <p class="meta">
+                                📅 2024-yil 20-yanvar &nbsp;|&nbsp;
+                                ✍️ Xasan Aliyev&nbsp;|&nbsp;
+                                ⏱️ 8 daqiqa o'qish &nbsp;|&nbsp;
+                                👁️ 2,341
+                            </p>
+                        </header>
+                        <p>
+                            <strong>Semantik teglar</strong> zamonaviy
+                            veb dasturlashning asosi hisoblanadi.
+                            <mark>header, nav, main, footer, section,
+                                article, aside</mark> — bularni to'g'ri
+                            ishlatish SEO va accessibility uchun
+                            juda muhim...
+                        </p>
+                        <div class="article-footer">
+                            <div class="teglar">
+                                <span>HTML5</span>
+                                <span>Semantika</span>
+                                <span>SEO</span>
+                            </div>
+                            <a href="#" class="o-qish">
+                                Batafsil o'qish →
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- MAQOLA 2 -->
+                <article>
+                    <img src="https://picsum.photos/700/200?random=62" alt="CSS maqola">
+                    <div class="article-kontent">
+                        <header>
+                            <h3>CSS Flexbox va Grid — qachon qaysi?</h3>
+                            <p class="meta">
+                                📅 2024-yil 18-yanvar &nbsp;|&nbsp;
+                                ✍️ Bobur Rahimov &nbsp;|&nbsp;
+                                ⏱️ 6 daqiqa &nbsp;|&nbsp;
+                                👁️ 1,890
+                            </p>
+                        </header>
+                        <p>
+                            <em>Flexbox</em> bir o'lchovli (1D) layoutlar
+                            uchun, <em>Grid</em> esa ikki o'lchovli (2D)
+                            uchun eng yaxshi tanlov. Lekin ularni
+                            <strong>birgalikda</strong> ishlatish
+                            eng kuchli natijalarga olib keladi...
+                        </p>
+                        <div class="article-footer">
+                            <div class="teglar">
+                                <span>CSS</span>
+                                <span>Flexbox</span>
+                                <span>Grid</span>
+                            </div>
+                            <a href="#" class="o-qish">
+                                Batafsil o'qish →
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- MAQOLA 3 -->
+                <article>
+                    <img src="https://picsum.photos/700/200?random=63" alt="JavaScript maqola">
+                    <div class="article-kontent">
+                        <header>
+                            <h3>JavaScript ES6+ — yangi boshlovchilar uchun</h3>
+                            <p class="meta">
+                                📅 2024-yil 15-yanvar &nbsp;|&nbsp;
+                                ✍️ Dilnoza Yusupova &nbsp;|&nbsp;
+                                ⏱️ 10 daqiqa &nbsp;|&nbsp;
+                                👁️ 3,120
+                            </p>
+                        </header>
+                        <p>
+                            ES6 bilan JavaScript tubdan o'zgardi:
+                            <strong>arrow functions, destructuring,
+                                template literals, async/await</strong> —
+                            bularni o'rganmasdan zamonaviy JS yozib
+                            bo'lmaydi...
+                        </p>
+                        <div class="article-footer">
+                            <div class="teglar">
+                                <span>JavaScript</span>
+                                <span>ES6</span>
+                                <span>Modern</span>
+                            </div>
+                            <a href="#" class="o-qish">
+                                Batafsil o'qish →
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            </section>
+
+            <!-- VIDEO DARSLAR -->
+            <section id="videolar">
+                <h2>🎬 Video Darslar</h2>
+
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="HTML asoslari video darsi"
+                        allowfullscreen loading="lazy">
+                    </iframe>
+                    <div class="video-info">
+                        <h3>HTML asoslari — yangi boshlovchilar uchun</h3>
+                        <p>
+                            📅 2024-yil 10-yanvar &nbsp;|&nbsp;
+                            ⏱️ 45 daqiqa &nbsp;|&nbsp;
+                            👁️ 12,450 ko'rishlar
+                        </p>
+                    </div>
+                </div>
+
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="CSS Flexbox video darsi"
+                        allowfullscreen loading="lazy">
+                    </iframe>
+                    <div class="video-info">
+                        <h3>CSS Flexbox — 1 soatda o'rganing</h3>
+                        <p>
+                            📅 2024-yil 5-yanvar &nbsp;|&nbsp;
+                            ⏱️ 60 daqiqa &nbsp;|&nbsp;
+                            👁️ 8,230 ko'rishlar
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- PODKAST / AUDIO -->
+            <section id="podkast">
+                <h2>🎙️ Podkast Epizodlari</h2>
+
+                <div class="audio-card">
+                    <img src="https://picsum.photos/70/70?random=70" alt="Epizod 1">
+                    <div class="audio-info">
+                        <h4>Epizod 12 — Frontend karyerasi</h4>
+                        <p>
+                            Frontend dasturchi bo'lish uchun nima kerak?
+                            Karyera yo'li haqida suhbat.
+                        </p>
+                        <audio controls>
+                            <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                </div>
+
+                <div class="audio-card">
+                    <img src="https://picsum.photos/70/70?random=71" alt="Epizod 2">
+                    <div class="audio-info">
+                        <h4>Epizod 11 — Remote ish topish</h4>
+                        <p>
+                            Xorijiy kompaniyalarda remote ishlash
+                            imkoniyatlari va qanday topish mumkin.
+                        </p>
+                        <audio controls>
+                            <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+
+        <!-- ===== ASIDE ===== -->
+        <aside>
+
+            <!-- MUALLIF -->
+            <div class="aside-card">
+                <div class="muallif">
+                    <img src="https://picsum.photos/100/100?random=80" alt="Xasan" width="100" height="100">
+                    <h4>Xasan Aliyev</h4>
+                    <p>⚡ Frontend dasturchi</p>
+                    <p>📍 Toshkent, O'zbekiston</p>
+                    <p>
+                        <a href="mailto:xasan@devblog.uz" style="color:#e94560">
+                            xasan@devblog.uz
+                        </a>
+                    </p>
+                    <div class="muallif-stats">
+                        <div class="stat">
+                            <strong>50+</strong>
+                            <span>Maqola</span>
+                        </div>
+                        <div class="stat">
+                            <strong>20+</strong>
+                            <span>Video</span>
+                        </div>
+                        <div class="stat">
+                            <strong>5K+</strong>
+                            <span>O'quvchi</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MASHHUR MAQOLALAR -->
+            <div class="aside-card">
+                <h3>🔥 Mashhur Maqolalar</h3>
+                <ol>
+                    <li><a href="#">HTML5 semantik teglar</a></li>
+                    <li><a href="#">CSS Flexbox qo'llanma</a></li>
+                    <li><a href="#">JavaScript ES6+</a></li>
+                    <li><a href="#">React asoslari</a></li>
+                    <li><a href="#">Git va GitHub</a></li>
+                </ol>
+            </div>
+
+            <!-- KATEGORIYALAR -->
+            <div class="aside-card">
+                <h3>📂 Kategoriyalar</h3>
+                <ul style="list-style:none; padding:0;">
+                    <li style="padding:6px 0; border-bottom:1px solid #f0f0f0;">
+                        <a href="#">🎨 HTML/CSS
+                            <span style="color:#888; float:right">(25)</span>
+                        </a>
+                    </li>
+                    <li style="padding:6px 0; border-bottom:1px solid #f0f0f0;">
+                        <a href="#">⚡ JavaScript
+                            <span style="color:#888; float:right">(18)</span>
+                        </a>
+                    </li>
+                    <li style="padding:6px 0; border-bottom:1px solid #f0f0f0;">
+                        <a href="#">🐍 Python
+                            <span style="color:#888; float:right">(12)</span>
+                        </a>
+                    </li>
+                    <li style="padding:6px 0; border-bottom:1px solid #f0f0f0;">
+                        <a href="#">⚛️ React
+                            <span style="color:#888; float:right">(8)</span>
+                        </a>
+                    </li>
+                    <li style="padding:6px 0;">
+                        <a href="#">🤖 Sun'iy intellekt
+                            <span style="color:#888; float:right">(6)</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- OBUNA FORMA -->
+            <div class="aside-card">
+                <h3>📬 Obuna Bo'ling</h3>
+                <p style="font-size:14px; color:#666; margin-bottom:15px;">
+                    Yangi maqolalar haqida birinchi bo'lib xabar oling!
+                </p>
+                <form class="obuna-forma">
+                    <input type="text" placeholder="Ismingiz" required>
+                    <input type="email" placeholder="Email manzilingiz" required>
+                    <button type="submit">✉️ Obuna bo'lish</button>
+                </form>
+            </div>
+
+        </aside>
+
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-grid">
+
+            <!-- Blog haqida -->
+            <div class="footer-col">
+                <h4>⚡ Dev Blog</h4>
+                <p>
+                    O'zbek tilida eng sifatli
+                    dasturlash darslari va maqolalar.
+                    HTML dan tortib AI gacha!
+                </p>
+                <br>
+                <p>
+                    <a href="mailto:Hasan922010@gmail.com">
+                        📧 Hasan922010@gmail.com
+                    </a>
+                </p>
+                <p>
+                    <a href="tel:+998885539363">
+                        📞 +998 88 553 93 63
+                    </a>
+                </p>
+            </div>
+
+            <!-- Tezkor havolalar -->
+            <div class="footer-col">
+                <h4>🔗 Tezkor Havolalar</h4>
+                <a href="#">Bosh sahifa</a>
+                <a href="#">Blog maqolalar</a>
+                <a href="#">Video darslar</a>
+                <a href="#">Podkast</a>
+                <a href="#">Muallif haqida</a>
+                <a href="#">Kontakt</a>
+            </div>
+
+            <!-- Mashhur darslar -->
+            <div class="footer-col">
+                <h4>📚 Mashhur Darslar</h4>
+                <a href="#">HTML asoslari</a>
+                <a href="#">CSS qo'llanma</a>
+                <a href="#">JavaScript kirish</a>
+                <a href="#">React tutorial</a>
+                <a href="#">Python asoslari</a>
+            </div>
+
+            <!-- Xarita -->
+            <div class="footer-col" id="xarita">
+                <h4>📍 Bizning Manzil</h4>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45352.62867967903!2d67.85778420333916!3d38.27328273120869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38b5110fcbfa23c3%3A0xfa283eac4e154a56!2sDenau%2C%20Surxondaryo%20Viloyati%2C%20O%CA%BBzbekiston!5e1!3m2!1suz!2s!4v1771784850157!5m2!1suz!2s"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" title="Denov shahar"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <figcaption>Denov shahri — Google Maps</figcaption>
+                </figure>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © 2026 Dev Blog — Barcha huquqlar himoyalangan |
+                <a href="#" style="color:#e94560">
+                    Maxfiylik siyosati
+                </a>
+            </p>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
