@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IT Programmer-Ro'yxatdan o'tish</title>
+</head>
+
+<body>
+    <!-- SARLAVHA -->
+    <h1>IT Programmer Denov</h1>
+    <p><em>Kelajak mutaxassislarini tayyorlaymiz</em></p>
+
+    <hr />
+
+    <!-- NAVIGATSIYA -->
+    <ul>
+        <li><a href="#kurslar">Kurslar</a></li>
+        <li><a href="#ruyxat">Royxatdan o'tish</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+
+    <hr />
+
+    <!-- KURSLAR JADVALI -->
+    <h2 id="kurlar">Mavjud Kurslar</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th colspan="5" align="center">2026-yil Kurslar Jadvali</th>
+            </tr>
+            <tr>
+                <th>Yo'nalishlar</th>
+                <th>Kurs nomi</th>
+                <th>Davomiyligi</th>
+                <th>Narxi</th>
+                <th>Holati</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="3" align="center"><strong>Frontend</strong></td>
+                <td>HTML+CSS</td>
+                <td>2 oy </td>
+                <td>1 000 000 so'm</td>
+                <td><mark>Bor</mark></td>
+            </tr>
+            <tr>
+                <td>JavaScript</td>
+                <td>3 oy</td>
+                <td> 1 500 000 so'm</td>
+                <td><mark>Bor</mark></td>
+            </tr>
+            <tr>
+                <td>React</td>
+                <td>3 oy</td>
+                <td> 1 500 000 so'm</td>
+                <td><del>To'lgan</del></td>
+            </tr>
+            <tr>
+                <td rowspan="2" align="center"> <strong>Backend</strong></td>
+                <td>Python</td>
+                <td>4 oy</td>
+                <td>2 000 000 so'm</td>
+                <td><mark>Bor</mark></td>
+            </tr>
+            <tr>
+                <td>Django</td>
+                <td>4 oy</td>
+                <td>2 000 000 so'm</td>
+                <td><mark>Bor</mark></td>
+            </tr>
+            <tr>
+                <td rowspan="2" align="center"><strong>Dizayn</strong></td>
+                <td>Figma</td>
+                <td>2 oy</td>
+                <td>800 000 so'm</td>
+                <td><mark>Bor</mark></td>
+            </tr>
+            <tr>
+                <td>Photoshop</td>
+                <td>2 oy</td>
+                <td>800 000 so'm</td>
+                <td><del>To'lgan</del></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2"> <strong>Jami: 7 ta kurs</strong></td>
+                <td>O'rtacha 3 oy</td>
+                <td colspan="2" align="center"> <strong>5 ta kurs mavjud </td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <!-- RO'YXATDAN O'TISH FORMASI -->
+    <h2 id="ruyxat">Ro'yxatdan o'tish</h2>
+    <form action="" method="post">
+        <!-- SHAXSIY MALUMOTLAR -->
+        <fieldset>
+            <legend>Shaxsiy ma'lumotlar</legend>
+
+            <p>
+                <label for="ism">Ism:</label>
+                <br>
+                <input type="text" id="ism" name="ism" placeholder="Ismingiz" required maxlength="50">
+            </p>
+            <p>
+                <label for="familiya">Familiya:</label>
+                <br>
+                <input type="text" id="familiya" name="familiya" placeholder="familiyangiz" required maxlength="50">
+            </p>
+
+            <p>
+                <label for="Email">Email:</label>
+                <br>
+                <input type="email" id="Email" name="Email" placeholder="Emailingiz" required>
+            </p>
+
+            <p>
+                <label for="tel">Telefon:</label>
+                <br>
+                <input type="tel" id="tel" name="tel" placeholder="+99 888 777 55 44" required>
+            </p>
+
+            <p>
+                <label for="yosh">Yoshingiz:</label>
+                <br>
+                <input type="number" id="yosh" name="yosh" min="14" max="60" placeholder="20" required>
+            </p>
+
+            <p>
+                <label for="tug-kun">Tug'ilgan sana:</label>
+                <br>
+                <input type="date" id="tug-kun" name="tug-kun">
+            </p>
+        </fieldset>
+        <br>
+
+        <!-- JINS -->
+         <fieldset>
+            <legend>Jins</legend>
+            <input type="radio" name="jins" id="Erkak" value="Erkak" checked>
+            <label for="erkak">Erkak</label>
+            <br>
+
+            <input type="radio" name="jins" id="Ayol" value="Ayol" checked>
+            <label for="Ayol">Ayol</label>
+            
+         </fieldset>
+         <br>
+         <!-- DARAJA -->
+          <fieldset>
+            <legend>Dasturlash Darajangiz</legend>
+            <input type="radio" id="nol" name="daraja" value="nol" checked>
+            <label for="nol">Nol hech narsani nilmayman </label>
+            <br>
+            <input type="radio" id="boshlang'ich" name="daraja" value="boshlang'ich">
+            <label for="boshlang'ich">Boshlang'ich biroz bilaman</label>
+            <br>
+            <input type="radio" id="o'rta" name="daraja" value="o'rta">
+            <label for="o'rta">O'rta darajada bilaman</label>
+            <br>
+            <input type="radio" id="ilgor" name="daraja" value="ilgor">
+            <label for="ilgor">Ilgor darajada bilaman</label>
+        </fieldset>
+        <br>
+        <!-- KURS TANLASH -->
+      <fieldset>
+        <legend>Kurs Tanlash</legend>
+
+        <p>
+          <label for="kurs">Qaysi kursni xohlaysiz:</label>
+          <br>
+          <select id="kurs" name="kurs" required>
+            <option value="">— Tanlang —</option>
+            <optgroup label="Frontend">
+              <option value="html-css">HTML + CSS — 500 000 so'm</option>
+              <option value="js">JavaScript — 800 000 so'm</option>
+              <option value="react">React — 900 000 so'm</option>
+            </optgroup>
+            <optgroup label="Backend">
+              <option value="python">Python — 1 000 000 so'm</option>
+              <option value="nodejs">Node.js — 1 000 000 so'm</option>
+            </optgroup>
+            <optgroup label="Dizayn">
+              <option value="figma">Figma — 600 000 so'm</option>
+              <option value="photoshop">Photoshop — 600 000 so'm</option>
+            </optgroup>
+          </select>
+        </p>
+
+        <p>
+          <label for="vaqt">Qulay vaqt:</label>
+          <br>
+          <select id="vaqt" name="vaqt">
+            <option value="ertalab">Ertalab (9:00-12:00)</option>
+            <option value="kunduz" selected>Kunduz (13:00-16:00)</option>
+            <option value="kechqurun">Kechqurun (17:00-20:00)</option>
+          </select>
+        </p>
+
+      </fieldset>
+
+      <br>
+
+      <!-- QIZIQISHLAR -->
+      <fieldset>
+        <legend>Qo'shimcha Qiziqishlar</legend>
+        <p><small>Bir nechta tanlashingiz mumkin:</small></p>
+
+        <input type="checkbox" id="frontend" name="qiziqish"
+               value="frontend" checked>
+        <label for="frontend">Frontend dasturlash</label>
+        <br>
+
+        <input type="checkbox" id="backend" name="qiziqish"
+               value="backend">
+        <label for="backend">Backend dasturlash</label>
+        <br>
+
+        <input type="checkbox" id="mobile" name="qiziqish"
+               value="mobile">
+        <label for="mobile">Mobil dasturlash</label>
+        <br>
+
+        <input type="checkbox" id="dizayn-q" name="qiziqish"
+               value="dizayn">
+        <label for="dizayn-q">UI/UX Dizayn</label>
+        <br>
+
+        <input type="checkbox" id="cyber" name="qiziqish"
+               value="cyber">
+        <label for="cyber">Kiberxavfsizlik</label>
+
+      </fieldset>
+
+      <br>
+
+      <!-- TO'LOV USULI -->
+      <fieldset>
+        <legend>To'lov Usuli</legend>
+
+        <input type="radio" id="naqd" name="tolov"
+               value="naqd" checked>
+        <label for="naqd">Naqd pul</label>
+        <br>
+
+        <input type="radio" id="karta" name="tolov" value="karta">
+        <label for="karta">Plastik karta</label>
+        <br>
+
+        <input type="radio" id="muddatli" name="tolov"
+               value="muddatli">
+        <label for="muddatli">Muddatli to'lov (3 oyga)</label>
+
+      </fieldset>
+
+      <br>
+
+      <!-- IZOH -->
+      <fieldset>
+        <legend>Qo'shimcha Ma'lumot</legend>
+
+        <p>
+          <label for="izoh">Savol yoki izohingiz:</label>
+          <br>
+          <textarea id="izoh" name="izoh" rows="4" cols="45"
+            placeholder="Savolingizni yozing..."></textarea>
+        </p>
+
+        <p>
+          <label for="qayerdan">Bizni qayerdan bildingiz:</label>
+          <br>
+          <select id="qayerdan" name="qayerdan">
+            <option value="">— Tanlang —</option>
+            <option value="telegram">Telegram</option>
+            <option value="instagram">Instagram</option>
+            <option value="dost">Do'st orqali</option>
+            <option value="google">Google</option>
+            <option value="boshqa">Boshqa</option>
+          </select>
+        </p>
+
+        <p>
+          <input type="checkbox" id="shartlar" name="shartlar" required>
+          <label for="shartlar">
+            <strong>Oferta shartlari va maxfiylik siyosatiga roziman</strong>
+          </label>
+        </p>
+
+        <p>
+          <input type="checkbox" id="xabar" name="xabar">
+          <label for="xabar">
+            Yangiliklar va aksiyalar haqida xabar olishga roziman
+          </label>
+        </p>
+
+      </fieldset>
+
+      <br>
+
+      <!-- TUGMALAR -->
+      <p>
+        <button type="submit">✅ Ro'yxatdan O'tish</button>
+        <button type="reset">🔄 Tozalash</button>
+      </p>
+
+    </form>
+
+    <hr>
+
+    <!-- KONTAKT -->
+    <h2 id="kontakt">📞 Kontakt</h2>
+
+    <table border="1">
+      <tr>
+        <th>Aloqa turi</th>
+        <th>Ma'lumot</th>
+      </tr>
+      <tr>
+        <td>📍 Manzil</td>
+        <td><strong>Toshkent, Yunusobod tumani</strong></td>
+      </tr>
+      <tr>
+        <td>📞 Telefon</td>
+        <td>
+          <a href="tel:+998901234567">+998 90 123 45 67</a>
+        </td>
+      </tr>
+      <tr>
+        <td>📧 Email</td>
+        <td>
+          <a href="mailto:info@itacademy.uz">info@itacademy.uz</a>
+        </td>
+      </tr>
+      <tr>
+        <td>🌐 Veb-sayt</td>
+        <td>
+          <a href="https://google.com" target="_blank">itacademy.uz</a>
+        </td>
+      </tr>
+      <tr>
+        <td>⏰ Ish vaqti</td>
+        <td>Dushanba — Shanba: <strong>9:00 — 20:00</strong></td>
+      </tr>
+    </table>
+
+    <hr>
+
+    <p align="center">
+      <small>© 2024 IT Academy. Barcha huquqlar himoyalangan.</small>
+    </p>
+
+</body>
+
+</html>
