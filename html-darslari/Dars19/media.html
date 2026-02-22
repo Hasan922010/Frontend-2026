@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Media Elementlar</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+        background: #f5f5f5;
+      }
+
+      h1 {
+        color: #1a1a2e;
+      }
+
+      section {
+        background: white;
+        padding: 25px;
+        margin-bottom: 30px;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      section h2 {
+        color: #e94560;
+        border-bottom: 2px solid #e94560;
+        padding-bottom: 8px;
+      }
+
+      video,
+      audio {
+        width: 100%;
+        margin: 10px 0;
+      }
+
+      iframe {
+        border: none;
+        border-radius: 8px;
+        margin: 10px 0;
+      }
+
+      figure {
+        margin: 0;
+      }
+
+      figcaption {
+        color: #666;
+        font-style: italic;
+        font-size: 14px;
+        margin-top: 5px;
+      }
+
+      .video-grid {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .video-card {
+        flex: 1;
+        min-width: 250px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .video-card p {
+        padding: 10px;
+        margin: 0;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>🎬 Media Elementlar Darsi</h1>
+
+    <!-- VIDEO BO'LIMI -->
+    <section>
+      <h2>🎬 Video elementlar</h2>
+
+      <h3>Asosiy video (controls bilan)</h3>
+      <figure>
+        <video
+          controls
+          width="100%"
+          poster="https://picsum.photos/800/400?random=50"
+        >
+          <source
+            src="https://www.w3schools.com/html/mov_bbb.mp4"
+            type="video/mp4"
+          />
+          Brauzeringiz videoni qo'llab-quvvatlamaydi.
+        </video>
+        <figcaption>Big Buck Bunny — bepul animatsion film</figcaption>
+      </figure>
+
+      <h3>Video atributlari</h3>
+      <p>
+        <strong>controls</strong> — boshqaruv tugmalari
+        <br />
+        <strong>poster</strong> — boshlashdan oldingi rasm
+        <br />
+        <strong>autoplay + muted</strong> — avtomatik (ovozsiz)
+        <br />
+        <strong>loop</strong> — qayta-qayta ijro
+      </p>
+
+      <!-- Autoplay + muted + loop misoli -->
+      <h3>Autoplay + Muted + Loop</h3>
+      <video
+        autoplay
+        muted
+        loop
+        width="400"
+        poster="https://picsum.photos/400/225?random=51"
+      >
+        <source
+          src="https://www.w3schools.com/html/mov_bbb.mp4"
+          type="video/mp4"
+        />
+      </video>
+      <p>
+        <small>
+          Bu video avtomatik boshlanadi, ovozsiz va qayta ijro etadi
+        </small>
+      </p>
+    </section>
+
+    <!-- AUDIO BO'LIMI -->
+    <section>
+      <h2>🔊 Audio elementlar</h2>
+
+      <h3>Asosiy audio</h3>
+      <audio controls style="width: 100%">
+        <source
+          src="https://www.w3schools.com/html/horse.mp3"
+          type="audio/mpeg"
+        />
+        Brauzeringiz audioni qo'llab-quvvatlamaydi.
+      </audio>
+      <p><small>Ot ovozi — W3Schools dan</small></p>
+
+      <h3>Audio atributlari</h3>
+      <p>
+        <strong>controls</strong> — play, pause, volume tugmalari
+        <br />
+        <strong>autoplay</strong> — sahifa ochilganda boshlanadi
+        <br />
+        <strong>loop</strong> — tugagach qayta boshlanadi
+        <br />
+        <strong>muted</strong> — ovozsiz boshlanadi
+      </p>
+    </section>
+
+    <!-- IFRAME — YOUTUBE -->
+    <section>
+      <h2>📺 YouTube Video (iframe)</h2>
+
+      <p>
+        YouTube videolarni sahifaga joylashtirish uchun
+        <strong>iframe</strong> ishlatiladi:
+      </p>
+
+      <figure>
+        <iframe
+          width="100%"
+          height="400"
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          title="YouTube video namunasi"
+          allowfullscreen
+          loading="lazy"
+        >
+        </iframe>
+        <figcaption>YouTube video — iframe orqali joylashtirilgan</figcaption>
+      </figure>
+
+      <h3>YouTube URL qoidasi:</h3>
+      <p>
+        <del>https://www.youtube.com/watch?v=VIDEO_ID</del>
+        <br />
+        <strong>https://www.youtube.com/embed/VIDEO_ID</strong>
+      </p>
+    </section>
+
+    <!-- IFRAME — GOOGLE MAPS -->
+    <section>
+      <h2>🗺️ Google Maps (iframe)</h2>
+
+      <figure>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45352.62867967903!2d67.85778420333916!3d38.27328273120869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38b5110fcbfa23c3%3A0xfa283eac4e154a56!2sDenau%2C%20Surxondaryo%20Viloyati%2C%20O%CA%BBzbekiston!5e1!3m2!1suz!2s!4v1771784850157!5m2!1suz!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <figcaption>Denov shahri — Google Maps</figcaption>
+      </figure>
+    </section>
+
+    <!-- IFRAME — BOSHQA SAYT -->
+    <section>
+      <h2>🌐 Boshqa sayt (iframe)</h2>
+
+      <p>Iframe orqali boshqa sahifani ham kiritish mumkin:</p>
+
+      <iframe
+        src="https://example.com"
+        width="100%"
+        height="300"
+        title="Example.com"
+      >
+      </iframe>
+
+      <p>
+        <small>
+          ⚠️ Ba'zi saytlar iframe da ko'rinishni bloklaydi (xavfsizlik sababi
+          bilan)
+        </small>
+      </p>
+    </section>
+
+    <!-- MEDIA + SEMANTIKA BIRGALIKDA -->
+    <section>
+      <h2>🎯 Media + Semantika birgalikda</h2>
+
+      <article>
+        <header>
+          <h3>HTML5 video darsi</h3>
+          <p><small>📅 2026-yil | ✍️ Xasan</small></p>
+        </header>
+
+        <figure>
+          <iframe
+            width="100%"
+            height="300"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="HTML5 video darsi"
+            allowfullscreen
+            loading="lazy"
+          >
+          </iframe>
+          <figcaption>HTML5 video tegi haqida dars</figcaption>
+        </figure>
+
+        <p>
+          Bu darsda <strong>HTML5 video</strong> tegini qanday ishlatishni
+          o'rganasiz. <em>Controls, autoplay, loop</em> atributlari bilan
+          ishlashni ko'rib chiqamiz.
+        </p>
+
+        <footer>
+          <p><small>Teglar: HTML5, Video, Media</small></p>
+        </footer>
+      </article>
+    </section>
+  </body>
+</html>
